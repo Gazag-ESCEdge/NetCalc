@@ -1,0 +1,103 @@
+:root {
+  --color-primary: #b0254a;
+  --color-primary-dark: #921e31;
+
+  --color-transp:rgba(0, 0, 0, 0);
+
+  --color-white: #ffffff;
+  --color-gray-light: #eeeeee;
+  --color-gray: #b8b8b8;
+  --color-gray-dark: #777777;
+  --color-black: #000000;
+
+  --color-success: #01bd78;
+  --color-error: #d40019;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
+@font-face {
+  font-family: 'base';
+  font-weight: 400;
+  src: url('/fonts/400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'base';
+  font-weight: 700;
+  src: url('/fonts/700.woff2') format('woff2');
+  font-display: swap;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+a {
+  width: fit-content;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin: 12px 0;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.verticalCenter{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+@media screen and (orientation: portrait){
+  .verticalCenter{
+    min-height: 0vh;
+  }
+}
+
+.calcApp{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.smallabel{
+  font-size: small;
+}
+
+.resultDiv{
+  display: flex;
+  flex-direction: column;
+}
